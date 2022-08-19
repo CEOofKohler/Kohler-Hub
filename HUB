@@ -41,7 +41,7 @@ if game.PlaceId == 3101667897 then
 end
 
 if game.PlaceId == 5130287078 then
-    loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/R2DA", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/R2DA", true))()
 end
 
 if game.PlaceId == 5087077830 then
