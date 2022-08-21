@@ -69,7 +69,7 @@ if game.PlaceId == 9772878203 then
 end
 
 if game.PlaceId == 947714452 then
-    loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/BAKERS-VALLEY", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/BAKERS-VALLEY", true))()
 end
 
 if game.PlaceId == 4620170611 then
