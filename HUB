@@ -89,7 +89,7 @@ loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/MGDWARE", 
 end
 
 if game.PlaceId == 740572368 then
-loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/DECEPTION", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/DECEPTION", true))()
 end
 
 if game.PlaceId == 7553566159 then
