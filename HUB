@@ -73,7 +73,7 @@ if game.PlaceId == 947714452 then
 end
 
 if game.PlaceId == 4620170611 then
-    loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/BREAK-IN", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/BREAK-IN", true))()
 end
 
 if game.PlaceId == 10118559731 then
