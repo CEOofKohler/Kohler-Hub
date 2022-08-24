@@ -115,3 +115,7 @@ end
 if game.PlaceId == 3057050847 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/SITE-76", true))()
 end
+
+if game.PlaceId == 6974557225 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/POOP-SIM", true))()
+end
