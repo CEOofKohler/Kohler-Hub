@@ -123,3 +123,6 @@ end
 if game.PlaceId == 7952502098 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/GLASS-OBBY", true))()
 end
+
+local inviteModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
+inviteModule.Join("https://discord.gg/NrCZpfVDsu")
