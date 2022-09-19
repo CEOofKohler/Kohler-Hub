@@ -83,7 +83,7 @@ loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/EASY-FREE-
 end
 
 if game.PlaceId == 7073069564 then
-loadstring(game:HttpGet("https://fuck-the-cube-in-the-ass.xyz/scripts/MGDWARE", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/MGDWARE", true))()
 end
 
 if game.PlaceId == 740572368 then
