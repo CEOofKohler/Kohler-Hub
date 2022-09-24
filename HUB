@@ -129,3 +129,7 @@ end
 if game.PlaceId == 4799594657 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/MURDER-ISLAND-2", true))()
 end
+
+if game.PlaceId == 4807634572 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-games/main/TOILET-PAPER", true))()
+end
