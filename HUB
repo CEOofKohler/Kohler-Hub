@@ -1,2 +1,0 @@
-	local inviteModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Discord%20Inviter/Source.lua"))()
-	inviteModule.Join("https://discord.gg/vAHUe2P5sV")
