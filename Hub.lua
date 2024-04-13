@@ -6179,3 +6179,97 @@ local Event = game:GetService("ReplicatedStorage").Remotes.CanBuyEgg
 Event:InvokeServer(A_1)
 end)
 end
+
+if game.PlaceId == 10511239884 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V3 - Ready 2 Die", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Survivor")
+local MainSection = Main:NewSection("Main")
+MainSection:NewToggle("Auto pick up wheels", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.NoRay:GetChildren()) do
+position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
+                if v:IsA("Part") then
+                    if v.Name == "wheel" then
+print("teleporting to wheel at:", v.Position)
+                               game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(2)
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = position
+task.wait(4)
+end
+end
+end
+end
+else
+AS = false
+end
+end)
+MainSection:NewToggle("Auto pick up tickets (WIP)", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.NoRay:GetChildren()) do
+position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
+                if v:IsA("Part") then
+                    if v.Name == "Ticket" then
+print("teleporting to ticket at", v.Position)
+                               game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+task.wait(1)
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = position
+task.wait(.3)
+end
+end
+end
+end
+else
+AS = false
+end
+end)
+local Main = Window:NewTab("Zombie")
+local MainSection = Main:NewSection("Main")
+MainSection:NewToggle("Auto kill players", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.Characters.Survivors:GetDescendants()) do
+                if v:IsA("Part") then
+                    if v.Name == "HumanoidRootPart" then
+print("teleporting to player at:", v.Position)
+game.Workspace.Characters.Zombies:WaitForChild(test)["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(.1)
+end
+end
+end
+end
+else
+AS = false
+end
+end)
+local MainSection = Main:NewSection("Farm")
+MainSection:NewToggle("Autofarm tickets", "", function(state)
+    if state then
+KRAMPUSW = true
+while KRAMPUSW do
+task.wait()
+local ohNumber1 = 0
+local ohString2 = "RemoteDeath"
+game:GetService("ReplicatedStorage").Events.SelfDamage:FireServer(ohNumber1, ohString2)
+end
+else
+KRAMPUSW = false
+end
+end)
+end
