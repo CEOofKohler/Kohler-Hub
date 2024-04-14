@@ -6186,12 +6186,9 @@ local Window = Library.CreateLib("Kohler Hub V3 - Ready 2 Die", _G.Theme)
 wait(0.5)
 local Main = Window:NewTab("Survivor")
 local MainSection = Main:NewSection("Main")
-MainSection:NewToggle("Auto pick up wheels", "", function(state)
-    if state then
- AS = true
+MainSection:NewButton("Auto pick up wheels", "", function()
 test = game.Players.LocalPlayer.Name
 print(test)
-while AS do
 task.wait()
 for i,v in pairs(game.Workspace.NoRay:GetChildren()) do
 position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
@@ -6200,14 +6197,12 @@ position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
 print("teleporting to wheel at:", v.Position)
                                game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
 task.wait(2)
-game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = position
-task.wait(4)
+for i,v in pairs(workspace.Map.Truck.KingstreetTruck.Wheels:GetChildren()) do
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(.2)
 end
 end
 end
-end
-else
-AS = false
 end
 end)
 MainSection:NewToggle("Auto pick up tickets (WIP)", "", function(state)
