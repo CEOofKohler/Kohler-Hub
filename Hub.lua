@@ -6183,6 +6183,25 @@ end
 if game.PlaceId == 10511239884 then
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Kohler Hub V3 - Ready 2 Die", _G.Theme)
+
+local MODERATORS = {10494705, 208509067, 3660922176, 37895172, 131121698, 164614348, 72319879, 137085323, 97643008, 387862444, 1311494717, 41218014, 1463928658, 948225603, 879190185, 87048194, 294884836, 104561402, 179089854, 429879609, 87048194, 347084975, 1715252895, 72723531, 47177951, 269955948}
+for i,v in pairs(game.Players:GetChildren()) do
+    if table.find(MODERATORS, v.UserId) then
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+end
+end
+game.Players.PlayerAdded:Connect(function(v)
+    if table.find(MODERATORS, v.UserId) then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+        MOD = v.UserId
+        MODUSER = v.Name
+    end
+end)
+game.Players.PlayerRemoving:Connect(function(v)
+    if table.find(MODERATORS, tonumber(MOD)) then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR LEFT", Text = MODUSER, Duration = 5})
+    end
+end)
 wait(0.5)
 local Main = Window:NewTab("Survivor")
 local MainSection = Main:NewSection("Main")
