@@ -6224,6 +6224,27 @@ end
 end
 end
 end)
+
+MainSection:NewToggle("Auto pick up dropped items", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.Extrawork:GetChildren()) do
+position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
+print("teleporting to ", v.Name,  " at:", v.Position)
+                               game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(2)
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = position
+end
+end
+else
+AS = false
+end
+end)
+
 MainSection:NewToggle("Auto pick up tickets (WIP)", "", function(state)
     if state then
  AS = true
