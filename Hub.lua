@@ -41,9 +41,6 @@ else
     foremostsucksass = false
     end
 end)
-MainSection:NewButton("Farm script (copies to clipboard)", "", function()
-    setclipboard(tostring(loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub-extras/main/Speedrun-4-farm"))()))
-end)
 end
 
 if game.PlaceId == 4799594657 then --MURDER ISLAND 2
