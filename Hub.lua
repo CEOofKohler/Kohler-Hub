@@ -43,26 +43,6 @@ else
 end)
 end
 
-if game.PlaceId == 4799594657 then --MURDER ISLAND 2
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Kohler Hub Paid - Murder Island 2", _G.Theme)
-wait(0.5)
-local Main = Window:NewTab("Main")
-local MainSection = Main:NewSection("OP")
-MainSection:NewButton("Find body", "", function()
-    local body = game:GetService("Workspace").Removables.Death.Handle.Position
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(body)
-end)
-MainSection:NewButton("Pickup clues", "", function()
-for i,v in pairs(game:GetService("Workspace").Removables:GetChildren()) do
-    if v.ClassName == "MeshPart" or v.ClassName == "Part" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
-    wait(2)
-    end
-end
-end)
-end
-
 if game.PlaceId == 4769793533 then --FLICKER
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Kohler Hub Paid - Flicker", _G.Theme)
