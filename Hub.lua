@@ -43,25 +43,6 @@ else
 end)
 end
 
-if game.PlaceId == 4769793533 then --FLICKER
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Kohler Hub Paid - Flicker", _G.Theme)
-wait(0.5)
-local Main = Window:NewTab("Trolling")
-local MainSection = Main:NewSection("Pass everyone a note")
-MainSection:NewTextBox("Note text", "", function(NOTE)
-    for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-local ohString1 = NOTE
-game:GetService("ReplicatedStorage").Networking.CreateNote:InvokeServer(ohString1)
-local ohString2 = "Confirm"
-game:GetService("ReplicatedStorage").Networking.UpdateNote:FireServer(ohString2)
-local ohString3 = "Send"
-local ohInstance2 = game:GetService("Players")[(tostring(v))]
-game:GetService("ReplicatedStorage").Networking.UpdateNote:FireServer(ohString3, ohInstance2)
-end
-end)
-end
-
 if game.PlaceId == 17541193 then --PINEWOOD COMPUTER CORE
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Kohler Hub Paid - Pinewood Computer Core", _G.Theme)
