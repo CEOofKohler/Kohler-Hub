@@ -1,0 +1,354 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Pinewood Computer Core", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Helpful shit")
+MainSection:NewButton("Load stats UI", "", function()
+    -- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextLabel_5 = Instance.new("TextLabel")
+local TextLabel_6 = Instance.new("TextLabel")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextLabel_8 = Instance.new("TextLabel")
+local TextLabel_9 = Instance.new("TextLabel")
+local TextLabel_10 = Instance.new("TextLabel")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local TextLabel_11 = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local TextLabel_12 = Instance.new("TextLabel")
+local ImageLabel_4 = Instance.new("ImageLabel")
+local TextLabel_13 = Instance.new("TextLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
+local TextLabel_14 = Instance.new("TextLabel")
+local ImageLabel_6 = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Position = UDim2.new(-1.49011612e-08, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 100, 0, 35)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Core temp:"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = ScreenGui
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.Position = UDim2.new(0.077279754, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+ImageLabel.Parent = ScreenGui
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0.0772797465, 0, 0.0411764681, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 35)
+ImageLabel.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel_3.Parent = ScreenGui
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.Position = UDim2.new(-0.000772804022, 0, 0.0411764383, 0)
+TextLabel_3.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Coolant tank status:"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 13.000
+
+TextLabel_4.Parent = ScreenGui
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.Position = UDim2.new(0.154559508, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "Coolant pump 1 status"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 12.000
+
+TextLabel_5.Parent = ScreenGui
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.Position = UDim2.new(0.154559523, 0, 0.0411764681, 0)
+TextLabel_5.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Coolant pump 2 status:"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextSize = 12.000
+
+TextLabel_6.Parent = ScreenGui
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.Position = UDim2.new(0.231839254, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_6.Font = Enum.Font.SourceSans
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.TextSize = 14.000
+
+TextLabel_7.Parent = ScreenGui
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.Position = UDim2.new(0.231839254, 0, 0.0411764681, 0)
+TextLabel_7.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_7.Font = Enum.Font.SourceSans
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextSize = 14.000
+
+TextLabel_8.Parent = ScreenGui
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.Position = UDim2.new(0.309119016, 0, 0.0199999921, 0)
+TextLabel_8.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_8.Font = Enum.Font.SourceSans
+TextLabel_8.Text = "Coolant production status:"
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextSize = 9.000
+
+TextLabel_9.Parent = ScreenGui
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.Position = UDim2.new(0.386398733, 0, 0.0199999958, 0)
+TextLabel_9.Size = UDim2.new(0, 100, 0, 35)
+TextLabel_9.Font = Enum.Font.SourceSans
+TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.TextSize = 14.000
+
+TextLabel_10.Parent = ScreenGui
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.Position = UDim2.new(0.462905765, 0, 0, 0)
+TextLabel_10.Size = UDim2.new(0, 70, 0, 35)
+TextLabel_10.Font = Enum.Font.SourceSans
+TextLabel_10.Text = "Fan 1 status:"
+TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.TextSize = 14.000
+
+ImageLabel_2.Parent = ScreenGui
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.Position = UDim2.new(0.517001569, 0, -0.00117647054, 0)
+ImageLabel_2.Size = UDim2.new(0, 70, 0, 70)
+ImageLabel_2.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel_11.Parent = ScreenGui
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.Position = UDim2.new(0.571097374, 0, 0, 0)
+TextLabel_11.Size = UDim2.new(0, 70, 0, 35)
+TextLabel_11.Font = Enum.Font.SourceSans
+TextLabel_11.Text = "Fan 2 status:"
+TextLabel_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.TextSize = 14.000
+
+ImageLabel_3.Parent = ScreenGui
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_3.Position = UDim2.new(0.625193179, 0, 0, 0)
+ImageLabel_3.Size = UDim2.new(0, 70, 0, 70)
+ImageLabel_3.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel_12.Parent = ScreenGui
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.Position = UDim2.new(0.679289043, 0, 0, 0)
+TextLabel_12.Size = UDim2.new(0, 70, 0, 35)
+TextLabel_12.Font = Enum.Font.SourceSans
+TextLabel_12.Text = "Fan 3 status:"
+TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.TextSize = 14.000
+
+ImageLabel_4.Parent = ScreenGui
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_4.Position = UDim2.new(0.733384848, 0, 0, 0)
+ImageLabel_4.Size = UDim2.new(0, 70, 0, 70)
+ImageLabel_4.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel_13.Parent = ScreenGui
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.Position = UDim2.new(0.787480652, 0, -0.00117644668, 0)
+TextLabel_13.Size = UDim2.new(0, 70, 0, 35)
+TextLabel_13.Font = Enum.Font.SourceSans
+TextLabel_13.Text = "Fan 4 status:"
+TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_13.TextSize = 14.000
+
+ImageLabel_5.Parent = ScreenGui
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_5.Position = UDim2.new(0.841576517, 0, -5.93718141e-09, 0)
+ImageLabel_5.Size = UDim2.new(0, 70, 0, 70)
+ImageLabel_5.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+TextLabel_14.Parent = ScreenGui
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.Position = UDim2.new(0.895672321, 0, 0, 0)
+TextLabel_14.Size = UDim2.new(0, 65, 0, 35)
+TextLabel_14.Font = Enum.Font.SourceSans
+TextLabel_14.Text = "Fan 5 status:"
+TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.TextSize = 14.000
+
+ImageLabel_6.Parent = ScreenGui
+ImageLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_6.Position = UDim2.new(0.945904136, 0, 0, 0)
+ImageLabel_6.Size = UDim2.new(0, 70, 0, 70)
+ImageLabel_6.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+-- Scripts:
+
+local function EDHYLM_fake_script() -- TextLabel_2.Script 
+	local script = Instance.new('Script', TextLabel_2)
+
+	while true do
+		task.wait(.1)
+		for i,v in pairs(game:GetService("Workspace").MeltdownDamagedItems:GetDescendants()) do
+			if v:IsA("TextLabel") and v.TextSize == 42 then
+				script.Parent.Text = (tostring(v.Text))
+			end
+		end
+	end
+end
+coroutine.wrap(EDHYLM_fake_script)()
+local function AFXM_fake_script() -- ImageLabel.Script 
+	local script = Instance.new('Script', ImageLabel)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Image = game:GetService("Workspace").coolantlow.Decal.Texture
+	end
+end
+coroutine.wrap(AFXM_fake_script)()
+local function MSQZP_fake_script() -- TextLabel_6.Script 
+	local script = Instance.new('Script', TextLabel_6)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Text = game:GetService("Workspace").MeltdownDamagedItems.Coolantsupplypumpsadmindisplay.Pump1.Status.SurfaceGui.TextLabel.Text
+	end
+end
+coroutine.wrap(MSQZP_fake_script)()
+local function QDOWDM_fake_script() -- TextLabel_7.Script 
+	local script = Instance.new('Script', TextLabel_7)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Text = game:GetService("Workspace").MeltdownDamagedItems.Coolantsupplypumpsadmindisplay.Pump2.Status.SurfaceGui.TextLabel.Text
+	end
+end
+coroutine.wrap(QDOWDM_fake_script)()
+local function JBJIVPH_fake_script() -- TextLabel_9.Script 
+	local script = Instance.new('Script', TextLabel_9)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Text = game:GetService("Workspace").MeltdownDamagedItems.Coolantproductiondisplay.Status.SurfaceGui.TextLabel.Text
+	end
+end
+coroutine.wrap(JBJIVPH_fake_script)()
+local function IYUHTS_fake_script() -- ImageLabel_2.Script 
+	local script = Instance.new('Script', ImageLabel_2)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Image = game:GetService("Workspace").MeltdownDamagedItems.adminfandisplaya.Decal.Texture
+	end
+end
+coroutine.wrap(IYUHTS_fake_script)()
+local function JMMAU_fake_script() -- ImageLabel_3.Script 
+	local script = Instance.new('Script', ImageLabel_3)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Image = game:GetService("Workspace").MeltdownDamagedItems.adminfandisplayb.Decal.Texture
+	end
+end
+coroutine.wrap(JMMAU_fake_script)()
+local function YJVGVO_fake_script() -- ImageLabel_4.Script 
+	local script = Instance.new('Script', ImageLabel_4)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Image = game:GetService("Workspace").MeltdownDamagedItems.adminfandisplayc.Decal.Texture
+	end
+end
+coroutine.wrap(YJVGVO_fake_script)()
+local function EBJPR_fake_script() -- ImageLabel_5.Script 
+	local script = Instance.new('Script', ImageLabel_5)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Image = game:GetService("Workspace").MeltdownDamagedItems.adminfandisplayd.Decal.Texture
+	end
+end
+coroutine.wrap(EBJPR_fake_script)()
+local function WPWUE_fake_script() -- ImageLabel_6.Script 
+	local script = Instance.new('Script', ImageLabel_6)
+
+	while true do
+		task.wait(.1)
+		script.Parent.Image = game:GetService("Workspace").MeltdownDamagedItems.adminfandisplaye.Decal.Texture
+	end
+end
+coroutine.wrap(WPWUE_fake_script)()
+end)
+MainSection:NewSlider("WalkSpeed", "", 100, 0, function(wk)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = wk
+end)
+MainSection:NewSlider("JumpPower", "", 500, 0, function(js)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = js
+end)
+local Main = Window:NewTab("Teleports")
+local MainSection = Main:NewSection("Heating")
+MainSection:NewButton("Reactor suit", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-368, 471, 212)
+    wait(.1)
+    game.Players.LocalPlayer.Character.Humanoid.Jump = true
+end)
+MainSection:NewButton("Reactor power", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-258, 226, -504)
+end)
+MainSection:NewButton("Lazer 1", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-283, 283, -201)
+end)
+MainSection:NewButton("Lazer 2", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-358, 262, -283)
+end)
+MainSection:NewButton("Lazer 3", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-283, 283, -362)
+end)
+MainSection:NewButton("Lazer 4", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-208, 262, -283)
+end)
+MainSection:NewButton("Boost lazer 1", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-247, 283, -225)
+end)
+MainSection:NewButton("Boost lazer 2", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-318, 283, -226)
+end)
+local MainSection = Main:NewSection("Cooling")
+MainSection:NewButton("Coolant flow control", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-166, 735, -238)
+end)
+MainSection:NewButton("Coolant pumps", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(116, 448, -718)
+end)
+MainSection:NewButton("Coolant tank", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(149, 410, -995)
+end)
+MainSection:NewButton("Fans", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-459, 708, -308)
+end)
+end
+
+if game.PlaceId == 10829017357 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Find the Smils (Lobby)", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("OP")
+local MainSection = Main:NewSection("Free badges")
+MainSection:NewButton("Auto find the smils", "", function()
+    for i,v in pairs(game:GetService("Workspace").Smils:GetChildren()) do
+        firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 1)
+        firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 0)
+    wait(1)
+end
+end)
