@@ -1,0 +1,42 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Speedrun 4", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("OP")
+local MainSection = Main:NewSection("Stars")
+MainSection:NewToggle("Inf stars (it's slow but it works)", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        task.wait()
+        local table = {"Level 1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Level 8", "Level 9", "Level 10", "Level 11", "Level 12", "Level 13", "Level 14", "Level 15", "Level 16", "Level 17", "Level 18", "Level 19", "Level 20", "Level 21", "Level 22", "Level 23", "Level 24", "Level 25", "Level 26", "Level 27", "Level 28", "Level 29", "Level 30"}
+        for elonhigh, Kohlerwinning in ipairs(table) do
+            game:GetService("ReplicatedStorage").GotStar:FireServer(Kohlerwinning)
+        end
+    end
+else
+    kwellworth = false
+end
+end)
+local MainSection = Main:NewSection("Gems/Levels")
+MainSection:NewButton("Progress 1 time", "", function()
+local ohNumber1 = 49.16687631607056
+local ohString2 = "Level 1"
+local ohString3 = "Normal"
+local ohBoolean4 = true
+game:GetService("ReplicatedStorage").BeatLevel:FireServer(ohNumber1, ohString2, ohString3, ohBoolean4)
+end)
+MainSection:NewToggle("Screw going one at a time", "", function(state)
+    if state then
+        foremostsucksass = true
+        while foremostsucksass do
+            task.wait(.1)
+            local ohNumber1 = 49.16687631607056
+            local ohString2 = "Level 1"
+            local ohString3 = "Normal"
+            local ohBoolean4 = true
+            game:GetService("ReplicatedStorage").BeatLevel:FireServer(ohNumber1, ohString2, ohString3, ohBoolean4)
+        end
+else
+    foremostsucksass = false
+    end
+end)
