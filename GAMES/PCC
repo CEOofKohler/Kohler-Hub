@@ -337,18 +337,3 @@ end)
 MainSection:NewButton("Fans", "", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-459, 708, -308)
 end)
-end
-
-if game.PlaceId == 10829017357 then
-    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Kohler Hub Paid - Find the Smils (Lobby)", _G.Theme)
-wait(0.5)
-local Main = Window:NewTab("OP")
-local MainSection = Main:NewSection("Free badges")
-MainSection:NewButton("Auto find the smils", "", function()
-    for i,v in pairs(game:GetService("Workspace").Smils:GetChildren()) do
-        firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 1)
-        firetouchinterest(game.Players.LocalPlayer.Character.Head, v, 0)
-    wait(1)
-end
-end)
