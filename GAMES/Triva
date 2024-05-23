@@ -1,0 +1,22 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Triva", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("OP")
+local MainSection = Main:NewSection("Auto Answer")
+MainSection:NewButton("Answer once", "", function()
+game:GetService("ReplicatedStorage").playerBuzz:FireServer()
+task.wait(2)
+game:GetService("ReplicatedStorage").playerAnswer:FireServer(game:GetService("Workspace").answer.Value)
+end)
+MainSection:NewToggle("Game breaking auto answer", "", function(state)
+    if state then
+        SEALASS = true
+        while SEALASS do
+            task.wait()
+            game:GetService("ReplicatedStorage").playerBuzz:FireServer()
+            game:GetService("ReplicatedStorage").playerAnswer:FireServer(game:GetService("Workspace").answer.Value)
+        end
+    else
+        SEALASS = false
+    end
+end)
