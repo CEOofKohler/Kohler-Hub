@@ -1,0 +1,9 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Deception", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Death")
+local MainSection = Main:NewSection("Killers")
+MainSection:NewTextBox("Kill someone", "", function(CEO)
+local ohInstance1 = workspace.Map[CEO]
+game:GetService("ReplicatedStorage").Weapons_Models.Ragdoll:FireServer(ohInstance1)
+end)
