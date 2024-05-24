@@ -1,0 +1,60 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+			local Window = Library.CreateLib("Kohler Hub V2 - Tower Battles", _G.Theme)
+			wait(0.5)
+			local Main = Window:NewTab("Stats")
+			local MainSection = Main:NewSection("Print (F9)")
+			MainSection:NewButton("Player wins", "", function()
+			    for i,v in pairs(game:GetService("Players"):GetDescendants()) do
+    if v.Name == "Wins" then
+        print("-------------------------")
+        print("Display name:", v.parent.parent.DisplayName)
+        CEO = v.parent.parent
+        print("Username:", CEO)
+        print("Wins:", v.Value)
+    end
+end
+end)
+MainSection:NewButton("Player cash", "", function()
+DSP = "Display name:"
+USR = "Username:"
+CASH = "Cash:"
+for i,v in pairs(game:GetService("Players"):GetDescendants()) do
+    if v.Name == "Cash" and v:IsA("IntValue") then
+        CEO = tostring(v.parent.parent.DisplayName)
+        CEOO = tostring(v.parent.parent)
+        MONEY = tostring(v.Value)
+        print(DSP, CEO)
+        print(USR, CEOO)
+        print(CASH, MONEY)
+    end
+end
+end)
+			local MainSection = Main:NewSection("Chat")
+			MainSection:NewButton("Player wins", "", function()
+DSP = "Display name: "
+USR = "Username: "
+WIN = "Wins: "
+for i,v in pairs(game:GetService("Players"):GetDescendants()) do
+    if v.Name == "Wins" then
+        CEO = tostring(v.parent.parent.DisplayName)
+        CEOO = tostring(v.parent.parent)
+        WINS = tostring(v.Value)
+        local ohString1 = DSP..CEO.." "..USR..CEOO.." "..WIN..WINS
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, "All")
+    end
+end
+end)
+MainSection:NewButton("Player cash", "", function()
+    DSP = "Display name: "
+USR = "Username: "
+CASH = "Cash: "
+for i,v in pairs(game:GetService("Players"):GetDescendants()) do
+    if v.Name == "Cash" and v:IsA("IntValue") then
+        CEO = tostring(v.parent.parent.DisplayName)
+        CEOO = tostring(v.parent.parent)
+        MONEY = tostring(v.Value)
+        local ohString1 = DSP..CEO.." "..USR..CEOO.." "..CASH..MONEY
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(ohString1, "All")
+    end
+end
+end)
