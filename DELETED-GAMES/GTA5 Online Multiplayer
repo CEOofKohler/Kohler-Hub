@@ -1,0 +1,25 @@
+if game.PlaceId == 8634358114 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - GTA5 Online Multiplayer", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("OP")
+MainSection:NewButton("Pickup all loose cash", "", function()
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    task.wait(.1)
+    if v.Name == "Cash" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    end
+end
+end)
+MainSection:NewButton("FE server crasher", "", function()
+    while true do
+    task.wait()
+local carcrash = {"Audi r8", "Ford Raptor", "2019 Bugatti Divo", "2013 Pagani Huayra", "2013 Porsche Cayenne Turbo S", "2017 Porsche Macan GTS", "2017 Tesla Model X P100D", "2020 Porsche 718 Spyder", "2021 Mercedes Benz C300 4Matic", "1960 Mercedes-Benz 190 SL"}
+for i,v in pairs(carcrash) do
+task.wait(.1)
+game:GetService("ReplicatedStorage").SpawnCar:FireServer(v)
+end
+end
+end)
+end
