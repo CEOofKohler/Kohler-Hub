@@ -1,0 +1,155 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Obby Leader", _G.Theme)
+wait(0.5)
+local Players = game:GetService("Players")
+local BlacklistedPlayers = {
+    "Doshiege",
+    "RebirthAlaskar",
+    "Yaxrium",
+    "T0x1cBr5tz",
+    "Iamluckynoodles",
+    "Klemrious",
+    "MrOdub",
+    "JJJDAY23",
+    "saywhoom",
+    "clapyblapy",
+    "P0FFLEY",
+    "4slug",
+    "19chad"
+}
+
+for _, v in pairs(Players:GetPlayers()) do 
+    if table.find(BlacklistedPlayers, v.Name) then 
+        local Notification = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Notifications/Script.lua"))()
+        Notification.newNotification("MOD USERNAME - Alert", v.Name, "Alert", {WaitTime = 10})
+        Notification.newNotification("MOD - Alert", "A mod is in your server", "Alert", {WaitTime = 10})
+        print(v.Name)
+    end
+end
+
+Players.PlayerAdded:Connect(function(v)
+    if table.find(BlacklistedPlayers, v.Name) then 
+        local Notification = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Notifications/Script.lua"))()
+        Notification.newNotification("MOD USERNAME - Alert", v.Name, "Alert", {WaitTime = 10})
+        Notification.newNotification("MOD - Alert", "A mod has joined your server", "Alert", {WaitTime = 10})
+        print(v.Name)
+    end
+end)
+print("mod fucker loaded, enjoy -CEO")
+local Main = Window:NewTab("Win")
+local MainSection = Main:NewSection("OP")
+MainSection:NewButton("Obvious win", "", function()
+    for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "MainPart" then
+        wait(0.01)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    end
+end
+end)
+MainSection:NewButton("BETA win (DOESN'T WORK %99 OF THE TIME", "", function()
+    for i,v in pairs(game.Players:GetPlayers()) do
+    local CEOO = v.Name
+    for i,vv in pairs(game:GetService("Workspace"):GetChildren()) do
+        if vv.Name == CEOO then
+            if vv.Name ~= game.Players.LocalPlayer.Name then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(vv:WaitForChild("HumanoidRootPart").Position)
+            game:GetService("ReplicatedStorage").Remotes.TouchedLeader:FireServer()
+            print(vv.HumanoidRootPart)
+            task.wait(1)
+        end
+    end
+end
+end
+end)
+local Main = Window:NewTab("Destroy")
+local MainSection = Main:NewSection("(UNFINISHED)")
+MainSection:NewToggle("Auto destroy easy lava", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        task.wait()
+        for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "LavaJumps" or v.Name == "LavaJumps2" then
+        v:Destroy()
+    end
+end
+    end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewToggle("Auto destroy junctions", "", function(state)
+    if state then
+    KUWU = true
+    while KUWU do
+        task.wait()
+        for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "Junction" then
+        v:Destroy()
+    end
+end
+    end
+else
+    KUWU = false
+end
+end)
+MainSection:NewToggle("Auto destroy Lava Frets", "", function(state)
+    if state then
+    KwUWU = true
+    while KwUWU do
+        task.wait()
+        for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "LavaFrets" then
+        v:Destroy()
+    end
+end
+    end
+else
+    KwUWU = false
+end
+end)
+MainSection:NewToggle("Auto destroy Roundabouts", "", function(state)
+    if state then
+    KwUWU = true
+    while KwUWU do
+        task.wait()
+        for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "Roundabout" then
+        v:Destroy()
+    end
+end
+    end
+else
+    KwUWU = false
+end
+end)
+MainSection:NewToggle("Auto destroy rock climbs", "", function(state)
+    if state then
+    KwUWU = true
+    while KwUWU do
+        task.wait()
+        for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "RockClimb" then
+        v:Destroy()
+    end
+end
+    end
+else
+    KwUWU = false
+end
+end)
+MainSection:NewToggle("Auto destroy upgraded lava bumps", "", function(state)
+    if state then
+    KwUWU = true
+    while KwUWU do
+        task.wait()
+        for i,v in pairs(game:GetService("Workspace").ObbyPart.Highlight:GetChildren()) do
+    if v.Name == "UpgradedLavaBump" then
+        v:Destroy()
+    end
+end
+    end
+else
+    KwUWU = false
+end
+end)
