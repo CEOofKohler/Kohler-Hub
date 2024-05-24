@@ -1,0 +1,119 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+			local Window = Library.CreateLib("Kohler Hub - Naval Warfare", _G.Theme)
+			wait(0.5)
+			-- MAIN
+			local Main = Window:NewTab("Main")
+			local MainSection = Main:NewSection("OP")
+			MainSection:NewToggle("Shoot fast", "", function(state)
+			    if state then
+			        CEOWINNING = true
+while CEOWINNING do
+    task.wait(0)
+local ohString1 = "shoot"
+local ohTable2 = {
+	[1] = true
+}
+
+game:GetService("ReplicatedStorage").Event:FireServer(ohString1, ohTable2)
+end
+else
+    CEOWINNING = false
+    end
+end)
+MainSection:NewToggle("Auto fire missle / drop bomb", "", function(state)
+    if state then
+    KOHLERW = true
+while KOHLERW do
+    task.wait(0.1)
+    local ohString1 = "bomb"
+    game:GetService("ReplicatedStorage").Event:FireServer(ohString1)
+local ohString1 = "bomb"
+local ohTable2 = {
+	[1] = true
+}
+
+game:GetService("ReplicatedStorage").Event:FireServer(ohString1, ohTable2)
+end
+else
+    KOHLERW = false
+    end
+end)
+MainSection:NewButton("Get a forcefield", "", function()
+    local old = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    local ohString1 = "Teleport"
+            local ohTable2 = {
+                [1] = "Harbour",
+                [2] = ""
+            }
+            game:GetService("ReplicatedStorage").Event:FireServer(ohString1, ohTable2)
+            task.wait(.1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(old)
+end)
+MainSection:NewToggle("Invincibility", "", function(state)
+if state then
+    Forcefieldfun = true
+    while Forcefieldfun do
+        task.wait(9)
+        local old = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+            local ohString1 = "Teleport"
+            local ohTable2 = {
+                [1] = "Harbour",
+                [2] = ""
+            }
+            game:GetService("ReplicatedStorage").Event:FireServer(ohString1, ohTable2)
+            task.wait(.2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(old)
+    end
+else
+    Forcefieldfun = false
+end
+end)
+            
+MainSection:NewToggle("Get a insane forcefield (temp)", "", function(state)
+if state then
+    FFfun = true
+    while FFfun do
+        task.wait()
+            local ohString1 = "Teleport"
+            local ohTable2 = {
+                [1] = "Harbour",
+                [2] = ""
+            }
+            game:GetService("ReplicatedStorage").Event:FireServer(ohString1, ohTable2)
+    end
+        else
+            FFfun = false
+end
+end)
+local Main = Window:NewTab("Teleports")
+local MainSection = Main:NewSection("Bases")
+MainSection:NewButton("Your harbour", "", function()
+    local ohString1 = "Teleport"
+local ohTable2 = {
+	[1] = "Harbour",
+	[2] = ""
+}
+
+game:GetService("ReplicatedStorage").Event:FireServer(ohString1, ohTable2)
+end)
+MainSection:NewButton("Base A", "", function()
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Island" and v.IslandCode.Value == "A" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Turret.Base.Position)
+    end
+end
+end)
+MainSection:NewButton("Base B", "", function()
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Island" and v.IslandCode.Value == "B" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Turret.Base.Position)
+    end
+end
+end)
+MainSection:NewButton("Base C", "", function()
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "Island" and v.IslandCode.Value == "C" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Turret.Base.Position)
+    end
+end
+end)
