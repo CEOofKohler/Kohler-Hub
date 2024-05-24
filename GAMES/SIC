@@ -1,0 +1,68 @@
+seatcount = 0
+for i,v in pairs(game.Workspace:GetDescendants()) do
+    if v:IsA("Seat") then
+        v:Destroy()
+        seatcount = seatcount + 1
+        print("Destroyed seat #", tostring(seatcount))
+    end
+end
+print("All seats destroyed, happy exploiting. -Kohler")
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V2 - Stupid Idiot Cafe", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("General")
+local MainSection = Main:NewSection("Robbing")
+MainSection:NewButton("Teleport to the managers office", "", function()
+    game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5), {CFrame = CFrame.new(-10, 5, 1)}):Play()
+    task.wait(5)
+    game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5), {CFrame = CFrame.new(-268, -61, 14)}):Play()
+end)
+MainSection:NewButton("Teleport to the drop-off point", "", function()
+    game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5), {CFrame = CFrame.new(-10, 5, 1)}):Play()
+    task.wait(5)
+    game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5), {CFrame = CFrame.new(317, -3, 7)}):Play()
+end)
+MainSection:NewButton("Pick up classified files", "", function()
+    for i,v in pairs(game.Workspace:GetDescendants()) do
+    if v:IsA("Tool") then
+        if v.Name == "classified files" then
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Handle, 1)
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Handle, 0)
+        task.wait(5)
+        end
+    end
+end
+end)
+MainSection:NewToggle("Auto pick up classified files", "", function(state)
+    if state then
+        AS = true
+        while AS do
+            for i,v in pairs(game.Workspace:GetDescendants()) do
+                if v:IsA("Tool") then
+                    if v.Name == "classified files" then
+                        firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Handle, 1)
+                        firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart"), v.Handle, 0)
+                        task.wait(5)
+                    end
+                end
+            end
+            task.wait()
+        end
+        else
+            AS = false
+    end
+end)  
+--[[local MainSection = Main:NewSection("Auto join")
+MainSection:NewToggle("Customer", "", function(state)
+    if state then
+        AS = true
+        while AS do
+            local ohInstance1 = game:GetService("Teams"):WaitForChild("Customers")
+            game:GetService("Players").LocalPlayer.PlayerGui.clicke:FireServer(ohInstance1)
+            game:GetService("Players").LocalPlayer.PlayerGui.teamjoin.Enabled = false
+            task.wait(.1)
+        end
+        else
+            AS = false
+    end
+end) ]]--
