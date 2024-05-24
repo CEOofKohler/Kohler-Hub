@@ -1,0 +1,78 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - The Obby Elevator", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Levels")
+local MainSection = Main:NewSection("This method will put you in negative EXP (faster)")
+MainSection:NewButton("Level up once", "", function()
+    game:GetService("ReplicatedStorage").EXP.LevelUp:FireServer()
+end)
+MainSection:NewToggle("Loop level up", "", function(state)
+    if state then
+        thisgameisass = true
+        while thisgameisass do
+           task.wait()
+           game:GetService("ReplicatedStorage").EXP.LevelUp:FireServer()
+        end
+   else
+       thisgameisass = false
+       end
+end)
+local MainSection = Main:NewSection("This one won't (slower)")
+MainSection:NewButton("Gain 30 EXP", "", function()
+    game:GetService("ReplicatedStorage").EXP.EXP30:FireServer()
+end)
+MainSection:NewToggle("Loop gain EXP", "", function(state)
+    if state then
+        expuwu = true
+        while expuwu do
+            task.wait()
+            game:GetService("ReplicatedStorage").EXP.EXP30:FireServer()
+        end
+        else
+            expuwu = false
+    end
+end)
+local Main = Window:NewTab("Wins")
+local MainSection = Main:NewSection("OP")
+MainSection:NewToggle("Auto win", "", function(state)
+    if state then
+        chadwinning = true
+        while chadwinning do
+            task.wait(1)
+for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "treasure" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    end
+end
+end
+else
+    chadwinning = false
+    end
+end)
+local Main = Window:NewTab("Others")
+local MainSection = Main:NewSection("OP")
+MainSection:NewButton("Get all badges (wait 150 secs)", "", function()
+    game:GetService("ReplicatedStorage").winnerbadge:FireServer()
+task.wait(1)
+game:GetService("ReplicatedStorage").lvl5badge:FireServer()
+task.wait(1)
+game:GetService("ReplicatedStorage").lvl20badge:FireServer()
+task.wait(1)
+game:GetService("ReplicatedStorage").lvl50badge:FireServer()
+task.wait(1)
+game:GetService("ReplicatedStorage").lvl100badge:FireServer()
+task.wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8061, 493, 57)
+task.wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8062, 493, 80)
+task.wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8061, 493, 104)
+for count = 1, 150 do
+    task.wait(1)
+    for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+    if v.Name == "treasure" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    end
+end
+end
+end)
