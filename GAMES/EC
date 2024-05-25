@@ -2,23 +2,59 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 local Window = Library.CreateLib("Kohler Hub V3 - Empire Clash", _G.Theme)
 
 local MODERATORS = {116068102, 20447349, 744532995, 645708889, 163946906, 330650151, 507857765, 1818826507, 3333808055, 483574465, 1717771414, 259652906, 129344834, 1545603946, 2381009679, 151555364, 239500009, 2593616518, 379965892, 112337427, 536939643, 650415895, 18122422, 143781547, 17878593, 850823079, 40238096, 66640909, 10256047, 19404653}
-for i,v in pairs(game.Players:GetChildren()) do
-    if table.find(MODERATORS, v.UserId) then
-    game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+
+local joinedPlayers = {}
+local leftPlayers = {}
+
+local function notifyModerator(player, action)
+    local message
+    if action == "join" then
+        if joinedPlayers[player.UserId] then
+            return
+        end
+        joinedPlayers[player.UserId] = true
+        message = " has joined the game."
+    elseif action == "leave" then
+        if not joinedPlayers[player.UserId] or leftPlayers[player.UserId] then
+            return
+        end
+        leftPlayers[player.UserId] = true
+        message = " has left the game."
+    end
+
+    if message then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = player.Name .. message, Duration = 5})
+    end
 end
-end
-game.Players.PlayerAdded:Connect(function(v)
-    if table.find(MODERATORS, v.UserId) then
-        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
-        MOD = v.UserId
-        MODUSER = v.Name
+
+game.Players.PlayerAdded:Connect(function(player)
+    if table.find(MODERATORS, player.UserId) then
+        notifyModerator(player, "join")
     end
 end)
-game.Players.PlayerRemoving:Connect(function(v)
-    if table.find(MODERATORS, tonumber(MOD)) then
-        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR LEFT", Text = MODUSER, Duration = 5})
+
+game.Players.PlayerRemoving:Connect(function(player)
+    if table.find(MODERATORS, player.UserId) then
+        notifyModerator(player, "leave")
     end
 end)
 wait(0.5)
-local Main = Window:NewTab("Survivor")
+local Main = Window:NewTab("Empire clash")
 local MainSection = Main:NewSection("Main")
+MainSection:NewTextBox("Spam chat", "", function(KOHLERWEL)
+getgenv().CLCOMMUNE = true
+while getgenv().CLCOMMUNE do
+task.wait(.5)
+for i,v in pairs(game:GetService("ReplicatedStorage").Packages.Knit.Services.ChatService.RE:GetChildren()) do
+local args = {
+    [1] = KOHLERWEL,
+    [2] = "Team"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ChatService"):WaitForChild("RE"):WaitForChild(v.Name):FireServer(unpack(args))
+end
+end
+end)
+MainSection:NewButton("End spam", "", function()
+getgenv().CLCOMMUNE = false
+end)
