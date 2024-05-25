@@ -1,0 +1,188 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Super Scuffle (Credit: jjito)", _G.Theme)
+wait(0.5)
+local Players = game:GetService("Players")
+local BlacklistedPlayers = {
+    "papwn",
+    "NotMakos",
+    "dylfinedas",
+    "Tidyen",
+    "Hexibin",
+    "Forcoy",
+    "TakupateTicko",
+    "BarnacleBot",
+    "Aidanator5",
+    "JaviAlgoYT",
+    "ARegularPlant",
+    "Slippery_Sun",
+    "RiverThree_47",
+    "batterkit",
+    "Ataraxi",
+    "AltiWyre"
+}
+
+for _, v in pairs(Players:GetPlayers()) do 
+    if table.find(BlacklistedPlayers, v.Name) then 
+        local Notification = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Notifications/Script.lua"))()
+        Notification.newNotification("MOD USERNAME - Alert", v.Name, "Alert", {WaitTime = 10})
+        Notification.newNotification("MOD - Alert", "A mod is in your server", "Alert", {WaitTime = 10})
+        print(v.Name)
+    end
+end
+
+Players.PlayerAdded:Connect(function(v)
+    if table.find(BlacklistedPlayers, v.Name) then 
+        local Notification = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Universal/Notifications/Script.lua"))()
+        Notification.newNotification("MOD USERNAME - Alert", v.Name, "Alert", {WaitTime = 10})
+        Notification.newNotification("MOD - Alert", "A mod has joined your server", "Alert", {WaitTime = 10})
+        print(v.Name)
+    end
+end)
+print("mod fucker loaded, enjoy -CEO")
+local Main = Window:NewTab("Weapons")
+local MainSection = Main:NewSection("Melee")
+MainSection:NewButton("Lollipop", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Lollipop.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Swordfish", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.SwordFish.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Scuffleboard", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Scuffleboard.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Pipe", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Pipe.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Bat", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Bat.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Fork", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Fork.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Mr. Sad", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons["Mr. Sad"].SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Pillow", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Pillow.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Scissors", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Scissors.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Spade", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Spade.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Hammer", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Hammer.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewKeybind("Fridge", "", Enum.KeyCode.F, function()
+    local ohString1 = "Fridge" -- put any items here and youll get it (HAS TO BE ITEM)
+local ohNumber2 = -500 -- negtive for positive, positive for negative (cherries cap at 500)
+local ohTable3 = {
+    ["TokenImage"] = "rbxassetid://11183867285",
+    ["ImageRectOffset"] = Vector2.new(53, 8),
+    ["NameInCode"] = "Cherries", -- put either cherries or berries
+    ["Location"] = "leaderstats2", --leaderstats2 for cherries, leaderstats1 for berries 
+    ["ImageRectSize"] = Vector2.new(49, 49),
+    ["AmountTextColor"] = Color3.new(1, 0.0745098, 0.243137)
+}
+
+game:GetService("ReplicatedStorage").BuyItem:FireServer(ohString1, ohNumber2, ohTable3)
+end)
+local MainSection = Main:NewSection("Ranged")
+MainSection:NewButton("Grapple rod", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons["Grapple Rod"].Particle.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+MainSection:NewButton("Telephone", "", function()
+    local walkback = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game:GetService("Workspace").weapons.Telephone.SpawnFX.Position)
+    task.wait(.5)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(walkback)
+end)
+end
+
+if game.PlaceId == 6808875742 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V2 - Be Toast, or You're Toast!", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("OP")
+local MainSection = Main:NewSection("LeaderBoard")
+MainSection:NewButton("Comfy Corner", "", function()
+local ohString1 = "Stage1"
+local ohNumber2 = 0
+local ohNumber3 = 20
+local ohNumber4 = 100
+local ohNumber5 = 1472158
+
+game:GetService("ReplicatedStorage").SubmitScore:FireServer(ohString1, ohNumber2, ohNumber3, ohNumber4, ohNumber5)
+end)
+MainSection:NewButton("Daycare Disaster", "", function()
+-- This script was generated by Hydroxide's RemoteSpy: https://github.com/Upbolt/Hydroxide
+
+local ohString1 = "Stage2"
+local ohNumber2 = 0
+local ohNumber3 = 50
+local ohNumber4 = 100
+local ohNumber5 = 4149474549
+
+game:GetService("ReplicatedStorage").SubmitScore:FireServer(ohString1, ohNumber2, ohNumber3, ohNumber4, ohNumber5)
+end)
+MainSection:NewButton("Kitchen Karma", "", function()
+local ohString1 = "Stage3"
+local ohNumber2 = 0
+local ohNumber3 = 35
+local ohNumber4 = 100
+local ohNumber5 = 4149474549
+game:GetService("ReplicatedStorage").SubmitScore:FireServer(ohString1, ohNumber2, ohNumber3, ohNumber4, ohNumber5)
+end)
+MainSection:NewButton("Office Ordeal", "", function()
+    local ohString1 = "Stage4"
+local ohNumber2 = 0
+local ohNumber3 = 40
+local ohNumber4 = 100
+local ohNumber5 = 4149474549
+game:GetService("ReplicatedStorage").SubmitScore:FireServer(ohString1, ohNumber2, ohNumber3, ohNumber4, ohNumber5)
+end)
+MainSection:NewButton("Chaotic Classroom", "", function()
+    local ohString1 = "Stage5"
+local ohNumber2 = 0
+local ohNumber3 = 40
+local ohNumber4 = 100
+local ohNumber5 = 4149474549
+game:GetService("ReplicatedStorage").SubmitScore:FireServer(ohString1, ohNumber2, ohNumber3, ohNumber4, ohNumber5)
+end)
