@@ -1,0 +1,129 @@
+if game:HttpGet('https://checks.kohlerwellworth.repl.co/SCRIPT-STATUS/CATASTROPHIA.html') == "unpatched" then
+KENT = game:HttpGet('https://checks.kohlerwellworth.repl.co/CATASTROPHIA')
+print(KENT)
+if game.PlaceId == 1089470888 or game.PlaceId == 3640115475 or game.PlaceId == 4943156874 or game.PlaceId == 5919333670 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V2 Paid - CATASTROPHIA", _G.Theme)
+wait(0.5)
+--[[ local Main = Window:NewTab("PVP")
+local MainSection = Main:NewSection("Healing")
+MainSection:NewTextBox("Auto bandage", "", function(state)
+    while true do
+        task.wait()
+        if tonumber(game.Players.LocalPlayer.Character.Humanoid.Health) < 90 then
+            game:GetService("ReplicatedStorage").Events.Lecit:FireServer(state)
+            task.wait(0.01)
+        end
+        end
+end)
+MainSection:NewTextBox("Auto medkit", "", function(state)
+    while true do
+        task.wait()
+        if tonumber(game.Players.LocalPlayer.Character.Humanoid.Health) < 51 then
+            game:GetService("ReplicatedStorage").Events.Lecit:FireServer(state)
+            task.wait(0.01)
+        end
+        end
+end) ]]--
+local Main = Window:NewTab("Crafting")
+local MainSection = Main:NewSection("Basic supplies")
+MainSection:NewToggle("Craft cloth", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "Cloth"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewToggle("Craft string", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "String"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+local MainSection = Main:NewSection("Healing")
+MainSection:NewToggle("Craft bandages", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "Bandage"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewToggle("Craft medkits", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "Medkit"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+local MainSection = Main:NewSection("Ammo")
+MainSection:NewToggle("Craft gunpowder", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "Gunpowder"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewToggle("Craft revolver ammo", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "PistolAmmo"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewToggle("Craft shotgun ammo", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "ShotgunAmmo"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewToggle("Craft rifle ammo", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        local ohString1 = "SmgAmmo"
+        game:GetService("ReplicatedStorage").Events[KENT]:InvokeServer(ohString1)
+        task.wait(1)
+        end
+else
+    kwellworth = false
+end
+end)
+end
+end
