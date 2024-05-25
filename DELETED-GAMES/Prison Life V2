@@ -1,0 +1,62 @@
+if game.PlaceId == 5087077830 then
+    			local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+			local Window = Library.CreateLib("Kohler Hub - Prison Life V2", "BloodTheme")
+			wait(0.5)
+			local Main = Window:NewTab("Guns")
+			local MainSection = Main:NewSection("Main")
+			MainSection:NewButton("Give M9", "", function()
+			    fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].giver.M9.ClickDetector)
+			end)
+			MainSection:NewButton("Give Shotgun", "", function()
+			    fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].giver["Remington 870"].ClickDetector)
+			end)
+			MainSection:NewButton("Give AK47", "", function()
+			    fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].giver["AK-47"].ClickDetector)
+			end)
+			MainSection:NewButton("Give M4A1", "", function()
+			    fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].giver.M4A1.ClickDetector)
+			end)
+			local Main = Window:NewTab("Melees")
+			local MainSection = Main:NewSection("Main")
+			MainSection:NewButton("Give Hammer", "", function()
+			    fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].single.Hammer.ClickDetector)
+			end)
+		    MainSection:NewButton("Give Knife", "", function()
+		        fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].single["Crude Knife"].ClickDetector)
+		    end)
+		    local Main = Window:NewTab("Teams")
+		    local MainSection = Main:NewSection("Main")
+		    MainSection:NewButton("Guards", "", function()
+		        local ohString1 = "Bright blue"
+		        game:GetService("ReplicatedStorage").changeteam:FireServer(ohString1)
+		        end)
+		         MainSection:NewButton("Inmates", "", function()
+		        local ohString1 = "Bright orange"
+		        game:GetService("ReplicatedStorage").changeteam:FireServer(ohString1)
+		         end)
+		         MainSection:NewButton("Criminals", "", function()
+		        local ohString1 = "Really red"
+		        game:GetService("ReplicatedStorage").changeteam:FireServer(ohString1)
+		        end)
+		         MainSection:NewButton("Neutral", "", function()
+		        local ohString1 = "Medium stone grey"
+		        game:GetService("ReplicatedStorage").changeteam:FireServer(ohString1)
+		         end)
+	        local Main = Window:NewTab("Others")
+	        local MainSection = Main:NewSection("Main")
+	        MainSection:NewButton("Open front gate", "", function()
+	            fireclickdetector(game:GetService("Workspace")["Prison_ITEMS"].buttons["Prison Gate"]["Prison Gate"].ClickDetector)
+	        end)
+            MainSection:NewButton("Pickup keycards (seal is da best)", "", function()
+                while true do
+                    task.wait(1)
+                    local a = game:GetService("Workspace"):FindFirstChild("keys")
+                    if a then
+                        local b = a:FindFirstChild("keycard")
+                        if b then
+                            fireclickdetector(b:FindFirstChild("ClickDetector"))
+                        end
+                    end
+                end
+            end)
+end
