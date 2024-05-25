@@ -1,0 +1,126 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V3 - Ready 2 Die", _G.Theme)
+
+local MODERATORS = {10494705, 208509067, 3660922176, 37895172, 131121698, 164614348, 72319879, 137085323, 97643008, 387862444, 1311494717, 41218014, 1463928658, 948225603, 879190185, 87048194, 294884836, 104561402, 179089854, 429879609, 87048194, 347084975, 1715252895, 72723531, 47177951, 269955948}
+for i,v in pairs(game.Players:GetChildren()) do
+    if table.find(MODERATORS, v.UserId) then
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+end
+end
+game.Players.PlayerAdded:Connect(function(v)
+    if table.find(MODERATORS, v.UserId) then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+        MOD = v.UserId
+        MODUSER = v.Name
+    end
+end)
+game.Players.PlayerRemoving:Connect(function(v)
+    if table.find(MODERATORS, tonumber(MOD)) then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR LEFT", Text = MODUSER, Duration = 5})
+    end
+end)
+wait(0.5)
+local Main = Window:NewTab("Survivor")
+local MainSection = Main:NewSection("Main")
+MainSection:NewButton("Auto pick up wheels", "", function()
+test = game.Players.LocalPlayer.Name
+print(test)
+task.wait()
+for i,v in pairs(game.Workspace.NoRay:GetChildren()) do
+position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
+                if v:IsA("Part") then
+                    if v.Name == "wheel" then
+print("teleporting to wheel at:", v.Position)
+                               game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(2)
+for i,v in pairs(workspace.Map.Truck.KingstreetTruck.Wheels:GetChildren()) do
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(.2)
+end
+end
+end
+end
+end)
+
+MainSection:NewToggle("Auto pick up dropped items", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.Extrawork:GetChildren()) do
+position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
+print("teleporting to ", v.Name,  " at:", v.Position)
+                               game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(2)
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = position
+end
+end
+else
+AS = false
+end
+end)
+
+MainSection:NewToggle("Auto pick up tickets (WIP)", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.NoRay:GetChildren()) do
+position = game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame
+                if v:IsA("Part") then
+                    if v.Name == "Ticket" then
+print("teleporting to ticket at", v.Position)
+                               game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = v.CFrame
+game.Players.LocalPlayer.Character.Humanoid.Jump = true
+task.wait(1)
+game.Workspace.Characters.Survivors[test]["HumanoidRootPart"].CFrame = position
+task.wait(.3)
+end
+end
+end
+end
+else
+AS = false
+end
+end)
+local Main = Window:NewTab("Zombie")
+local MainSection = Main:NewSection("Main")
+MainSection:NewToggle("Auto kill players", "", function(state)
+    if state then
+ AS = true
+test = game.Players.LocalPlayer.Name
+print(test)
+while AS do
+task.wait()
+for i,v in pairs(game.Workspace.Characters.Survivors:GetDescendants()) do
+                if v:IsA("Part") then
+                    if v.Name == "HumanoidRootPart" then
+print("teleporting to player at:", v.Position)
+game.Workspace.Characters.Zombies:WaitForChild(test)["HumanoidRootPart"].CFrame = v.CFrame
+task.wait(.1)
+end
+end
+end
+end
+else
+AS = false
+end
+end)
+local MainSection = Main:NewSection("Farm")
+MainSection:NewToggle("Autofarm tickets", "", function(state)
+    if state then
+KRAMPUSW = true
+while KRAMPUSW do
+task.wait()
+local ohNumber1 = 0
+local ohString2 = "RemoteDeath"
+game:GetService("ReplicatedStorage").Events.SelfDamage:FireServer(ohNumber1, ohString2)
+end
+else
+KRAMPUSW = false
+end
+end)
