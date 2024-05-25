@@ -1,0 +1,101 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V2 Paid - Anomic", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Ammo")
+local MainSection = Main:NewSection("Autobuy")
+MainSection:NewToggle("9mm (keeps above 150)", "", function(KOHLERUWU)
+    if KOHLERUWU then
+    KOHLER = true
+while KOHLER do
+    task.wait(.5)
+if game:GetService("ReplicatedStorage").PlayerAmmo[game.Players.LocalPlayer.Name]["9mm"].Value < 150 then
+local ohString1 = "9mm"
+local ohString2 = "Single"
+local ohColor33 = Color3.new(0, 0, 0)
+game:GetService("ReplicatedStorage")["_CS.Events"].PurchaseTeamItem:FireServer(ohString1, ohString2, ohColor33)
+end
+end
+else
+    KOHLER = false
+end
+end)
+MainSection:NewToggle(".45 ACP (keeps above 30)", "", function(KOHLERUWU)
+    if KOHLERUWU then
+    KOHLER = true
+while KOHLER do
+    task.wait(.5)
+if game:GetService("ReplicatedStorage").PlayerAmmo[game.Players.LocalPlayer.Name][".45 ACP"].Value < 30 then
+local ohString1 = ".45 ACP"
+local ohString2 = "Single"
+local ohColor33 = Color3.new(0, 0, 0)
+game:GetService("ReplicatedStorage")["_CS.Events"].PurchaseTeamItem:FireServer(ohString1, ohString2, ohColor33)
+end
+end
+else
+    KOHLER = false
+end
+end)
+MainSection:NewToggle("5.56 (keeps above 100)", "", function(KOHLERUWU)
+    if KOHLERUWU then
+    KOHLER = true
+while KOHLER do
+    task.wait(.5)
+if game:GetService("ReplicatedStorage").PlayerAmmo[game.Players.LocalPlayer.Name]["5.56"].Value < 100 then
+local ohString1 = "5.56"
+local ohString2 = "Single"
+local ohColor33 = Color3.new(0, 0, 0)
+game:GetService("ReplicatedStorage")["_CS.Events"].PurchaseTeamItem:FireServer(ohString1, ohString2, ohColor33)
+end
+end
+else
+    KOHLER = false
+end
+end)
+MainSection:NewToggle("12 Gauge (keeps above 20)", "", function(KOHLERUWU)
+    if KOHLERUWU then
+    KOHLER = true
+while KOHLER do
+    task.wait(.5)
+if game:GetService("ReplicatedStorage").PlayerAmmo[game.Players.LocalPlayer.Name]["12 Gauge"].Value < 20 then
+local ohString1 = "12 Gauge"
+local ohString2 = "Single"
+local ohColor33 = Color3.new(0, 0, 0)
+game:GetService("ReplicatedStorage")["_CS.Events"].PurchaseTeamItem:FireServer(ohString1, ohString2, ohColor33)
+end
+end
+else
+    KOHLER = false
+end
+end)
+MainSection:NewToggle("5.7x28 (keeps above 200)", "", function(KOHLERUWU)
+    if KOHLERUWU then
+    KOHLER = true
+while KOHLER do
+    task.wait(.5)
+if game:GetService("ReplicatedStorage").PlayerAmmo[game.Players.LocalPlayer.Name]["5.7x28"].Value < 200 then
+local ohString1 = "5.7x28"
+local ohString2 = "Single"
+local ohColor33 = Color3.new(0, 0, 0)
+game:GetService("ReplicatedStorage")["_CS.Events"].PurchaseTeamItem:FireServer(ohString1, ohString2, ohColor33)
+end
+end
+else
+    KOHLER = false
+end
+end)
+MainSection:NewToggle(".50 (keeps above 30)", "", function(KOHLERUWU)
+    if KOHLERUWU then
+    KOHLER = true
+while KOHLER do
+    task.wait(.5)
+if game:GetService("ReplicatedStorage").PlayerAmmo[game.Players.LocalPlayer.Name][".50"].Value < 30 then
+local ohString1 = ".50"
+local ohString2 = "Single"
+local ohColor33 = Color3.new(0, 0, 0)
+game:GetService("ReplicatedStorage")["_CS.Events"].PurchaseTeamItem:FireServer(ohString1, ohString2, ohColor33)
+end
+end
+else
+    KOHLER = false
+end
+end)
