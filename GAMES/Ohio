@@ -1,0 +1,42 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub V2 Paid - Ohio.", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("Autofarms")
+local MainSection = Main:NewSection("Cash")
+MainSection:NewToggle("Money", "", function(state)
+    if state then
+        pancak3 = true
+while pancak3 do
+    task.wait()
+for i,v in pairs(game:GetService("Workspace").Game.Entities.CashBundle:GetDescendants()) do
+    if v:IsA("Part") then
+        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(v.Position)
+        task.wait(.1)
+        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(1442, 4, 88)
+        task.wait(.1)
+    end
+end
+end
+else
+    pancak3 = false
+    end
+end)
+local MainSection = Main:NewSection("Gifts")
+MainSection:NewToggle("Auto collect gifts", "", function(state)
+    if state then
+        pancak3 = true
+while pancak3 do
+    task.wait()
+for i,v in pairs(game:GetService("Workspace").Game.Entities.ItemPickup:GetDescendants()) do
+    if v:IsA("ClickDetector") then
+        game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(v.Parent.Position)
+        task.wait(.1)
+        fireclickdetector(v)
+        task.wait(.1)
+end
+end
+end
+else
+    pancak3 = false
+    end
+end)
