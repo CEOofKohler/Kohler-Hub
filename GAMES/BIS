@@ -1,0 +1,75 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+            local Window = Library.CreateLib("Kohler Hub Paid - Break In Story", _G.Theme)
+            wait(0.5)
+            -- MAIN
+            local Main = Window:NewTab("Weapons")
+            local MainSection = Main:NewSection("Main")
+            MainSection:NewButton("Give Bat", "", function()
+                local ohString1 = "Bat"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            MainSection:NewButton("Give Pitchfork", "", function()
+                local ohBoolean1 = true
+                local ohString2 = "Pitchfork"
+                game:GetService("ReplicatedStorage").RemoteEvents.BasementWeapon:FireServer(ohBoolean1, ohString2)
+            end)
+            MainSection:NewButton("Give Crowbar", "", function()
+                local ohBoolean1 = true
+                local ohString2 = "Crowbar"
+                game:GetService("ReplicatedStorage").RemoteEvents.BasementWeapon:FireServer(ohBoolean1, ohString2)
+            end)
+            local Main = Window:NewTab("Food")
+            local MainSection = Main:NewSection("Pizza")
+            MainSection:NewButton("Big ass slice", "", function()
+                local ohString1 = "Pizza3"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            MainSection:NewButton("Medium ass slice", "", function()
+                local ohString1 = "Pizza2"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            MainSection:NewButton("Tiny ass slice", "", function()
+                local ohString1 = "Pizza1"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            MainSection:NewButton("Moldy ass slice (why?)", "", function()
+                local ohString1 = "EpicPizza"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            local MainSection = Main:NewSection("Other healing items")
+                        MainSection:NewButton("Get Chips", "",function()
+                local ohString1 = "Chips"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            MainSection:NewButton("Get A Medkit", "",function()
+                local ohString1 = "MedKit"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+                        MainSection:NewButton("Get A Cure", "",function()
+                local ohString1 = "Cure"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+                        end)
+                    MainSection:NewButton("Get A Bloxy Cola", "",function()
+                local ohString1 = "BloxyCola"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+                    end)
+                    local MainSection = Main:NewSection("Others")
+            MainSection:NewButton("Get A Teddy Bear", "",function()
+                local ohString1 = "TeddyBloxpin"
+                game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(ohString1)
+            end)
+            local MainSection = Main:NewSection("Planks")
+            MainSection:NewButton("Give Planks", "", function()
+                game:GetService("ReplicatedStorage").RemoteEvents.RefreshPlanks:FireServer()
+            end)
+            MainSection:NewToggle("Loopgive Planks", "", function(state)
+                if state then
+                    dick = true
+                    while dick do
+                        task.wait(.1)
+                        game:GetService("ReplicatedStorage").RemoteEvents.RefreshPlanks:FireServer()
+                    end
+                else
+                    dick = false
+                end
+            end)
