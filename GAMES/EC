@@ -41,20 +41,3 @@ end)
 wait(0.5)
 local Main = Window:NewTab("Empire clash")
 local MainSection = Main:NewSection("Main")
-MainSection:NewTextBox("Spam chat", "", function(KOHLERWEL)
-getgenv().CLCOMMUNE = true
-while getgenv().CLCOMMUNE do
-task.wait(.5)
-for i,v in pairs(game:GetService("ReplicatedStorage").Packages.Knit.Services.ChatService.RE:GetChildren()) do
-local args = {
-    [1] = KOHLERWEL,
-    [2] = "Team"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ChatService"):WaitForChild("RE"):WaitForChild(v.Name):FireServer(unpack(args))
-end
-end
-end)
-MainSection:NewButton("End spam", "", function()
-getgenv().CLCOMMUNE = false
-end)
