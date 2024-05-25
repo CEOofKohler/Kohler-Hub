@@ -1,0 +1,28 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Kohler Hub Paid - Slap Battles", _G.Theme)
+wait(0.5)
+local Main = Window:NewTab("OP")
+local MainSection = Main:NewSection("Slapping")
+MainSection:NewToggle("Anti slap", "", function(state)
+    if state then
+    kwellworth = true
+    while kwellworth do
+        task.wait()
+        if game:GetService("Workspace"):FindFirstChild(tostring(game.Players.LocalPlayer)):WaitForChild("Ragdolled").Value == true then
+    game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Anchored = true
+else
+    game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").Anchored = false
+        end
+    end
+else
+    kwellworth = false
+end
+end)
+MainSection:NewTextBox("Farm slaps", "", function(CEOOO)
+    while task.wait() do
+    firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game:GetService("Workspace").Lobby.Teleport1, 1)
+    firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), game:GetService("Workspace").Lobby.Teleport1, 0)
+    local K0HLER = game.Players[CEOOO].Character:WaitForChild("HumanoidRootPart").Position
+    game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(K0HLER)
+    end
+end)
