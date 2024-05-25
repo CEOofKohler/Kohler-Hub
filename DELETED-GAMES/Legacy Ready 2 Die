@@ -1,0 +1,20 @@
+if game.PlaceId == 10511239884 then
+local MODERATORS = {1472158, 118688163, 3660922176, 1321870782, 37895172, 1270175875, 47457345, 72319879, 208509067, 41218014, 137085323, 72996786, 179089854, 294884836}
+for i,v in pairs(game.Players:GetChildren()) do
+    if table.find(MODERATORS, v.UserId) then
+    game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+end
+end
+game.Players.PlayerAdded:Connect(function(v)
+    if table.find(MODERATORS, v.UserId) then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR ALERT!", Text = tostring(v.Name), Duration = 5})
+        MOD = v.UserId
+        MODUSER = v.Name
+    end
+end)
+game.Players.PlayerRemoving:Connect(function(v)
+    if table.find(MODERATORS, tonumber(MOD)) then
+        game:GetService("StarterGui"):SetCore("SendNotification", {Title = "MODERATOR LEFT", Text = MODUSER, Duration = 5})
+    end
+end)
+end
