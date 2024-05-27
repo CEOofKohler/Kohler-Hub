@@ -46,6 +46,8 @@ elseif game.PlaceId == 12068280773 then -- NAPOLEONIC WARS
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/NW"))()
 elseif game.PlaceId == 12207090333 then -- EMPIRE CLASH
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/EC"))()
+elseif game.PlaceId == 100624036 then -- CAR CRUSHERS 1
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/CC1"))()
 else
     game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Kohler Hub", Text = "Game not supported", Duration = 10})
 end
