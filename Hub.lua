@@ -44,8 +44,10 @@ elseif game.PlaceId == 10511239884 then -- READY 2 DIE
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/R2D"))()
 elseif game.PlaceId == 12068280773 then -- NAPOLEONIC WARS
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/NW"))()
-elseif game.PlaceId == 12207090333 then -- EMPIRE CLASH
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/EC"))()
+elseif game.PlaceId == 12207090333 then -- EMPIRE CLASH STONETONAS
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/EC-ST"))()
+elseif game.PlaceId == 15211108051 then -- EMPIRE CLASH RUNESPIRE
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/EC-RS"))()
 elseif game.PlaceId == 100624036 then -- CAR CRUSHERS 1
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CEOofKohler/Kohler-Hub/main/GAMES/CC1"))()
 else
